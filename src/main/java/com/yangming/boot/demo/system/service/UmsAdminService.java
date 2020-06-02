@@ -22,6 +22,11 @@ public interface UmsAdminService {
     UmsAdmin register(UmsAdminParam umsAdminParam);
 
     /**
+     * 注册功能
+     */
+    UmsAdmin register(UmsAdmin umsAdminParam);
+
+    /**
      * 登录功能
      * @param username 用户名
      * @param password 密码
