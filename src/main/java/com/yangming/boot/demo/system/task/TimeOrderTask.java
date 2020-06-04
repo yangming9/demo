@@ -21,7 +21,7 @@ public class TimeOrderTask {
 
     private static final Logger log = LoggerFactory.getLogger(TimeOrderTask.class);
 //系统启动之后，第一次任务 延迟 10秒钟 然后每隔10秒钟 执行一次任务
-    @Scheduled(initialDelay = 10000,fixedRate = 10000)
+    @Scheduled(initialDelay = 3600000,fixedRate = 3600000)
     private void doTimeTask() {
         log.info("do Scheduled task! one min once");
     }
