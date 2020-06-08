@@ -1,6 +1,8 @@
 server:
   port: 9000
 spring:
+  thymeleaf:
+    cache: false
   security:
     user:
       name: yangming
@@ -10,12 +12,16 @@ spring:
     username: root
     password: 123456
   data:
-      mongodb:
-        host: localhost
-        port: 27017
-        database: yangming
-  #      username: root
-#      password: 123456
+    elasticsearch:
+      repositories:
+        enabled: true
+    mongodb:
+      host: 192.168.3.188
+      port: 27017
+      database: mall-port
+      username: yangming
+      password: yangming
+#        uri: mongodb://root:123456@192.168.3.38:27017/mall-port
   rabbitmq:
     host: 192.168.3.188
     port: 5672
@@ -53,10 +59,3 @@ jwt:
   secret: mall-portal-secret #JWT加解密使用的密钥
   expiration: 604800 #JWT的超期限时间(60*60*24)
   tokenHead: yangming #JWT负载中拿到开头
-
-data:
-  elasticsearch:
-    repositories:
-      enabled: true
-    cluster-nodes: 127.0.0.1:9300 # es的连接地址及端口号
-    cluster-name: elasticsearch # es集群的名称
