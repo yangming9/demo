@@ -25,7 +25,7 @@ spring:
   rabbitmq:
     host: 192.168.3.188
     port: 5672
-    virtual-host: /yangming
+    virtual-host: /ems
     username: yangming
     password: yangming
 
