@@ -22,7 +22,7 @@
         </commentGenerator>
 
         <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
-                        connectionURL="jdbc:mysql://localhost:3306/mall?serverTimezone=Asia/Shanghai"
+                        connectionURL="jdbc:mysql://localhost:3306/shop_mall?serverTimezone=Asia/Shanghai"
                         userId="root"
                         password="123456">
             <!--解决mysql驱动升级到8.0后不生成指定数据库代码的问题-->
@@ -36,7 +36,7 @@
         <javaClientGenerator type="XMLMAPPER" targetPackage="mapper"
                              targetProject="E:\leanrn program\demo\src\main\java"/>
         <!--生成全部表tableName设为%-->
-        <table tableName="ums_admin">
+        <table tableName="*">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
     </context>
